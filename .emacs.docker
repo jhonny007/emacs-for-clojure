@@ -3,7 +3,7 @@
 (setq initial-scratch-message (concat initial-scratch-message
 ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\
 ;; This Emacs is Powered by my configurations\n\
-;; This is the full configuration using \`https://github.com/jhonny007/.emacs.d\`.\n\
+;; This is the full configuration using \`https://github.com/jhonny007/emacs-for-clojure\`.\n\
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n"))
 
 
