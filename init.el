@@ -150,6 +150,13 @@
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
+;; Execute code blocks with C-c-c
+;;(require 'package)
+;;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(org-babel-do-load-languages 'org-babel-load-languages
+  '((shell . t)))
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
