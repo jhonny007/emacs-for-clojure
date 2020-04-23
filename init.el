@@ -134,9 +134,22 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
+;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+;; For editing yaml - https://github.com/yoshiki/yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; For editing Dockerfile - https://github.com/spotify/dockerfile-mode
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
