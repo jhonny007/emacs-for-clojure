@@ -162,6 +162,9 @@
 ;; use bash as the default term or ansi-term
 (setq explicit-shell-file-name "/bin/bash")  
 
+;; export org file to confluence markup
+(require 'ox-confluence)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
