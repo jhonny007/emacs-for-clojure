@@ -138,6 +138,9 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
+;; Export of org files to html -  https://github.com/hniksic/emacs-htmlize
+(load "htmlize.el")
+
 ;; For editing yaml - https://github.com/yoshiki/yaml-mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
@@ -156,6 +159,8 @@
 (org-babel-do-load-languages 'org-babel-load-languages
   '((shell . t)))
 
+;; use bash as the default term or ansi-term
+(setq explicit-shell-file-name "/bin/bash")  
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
