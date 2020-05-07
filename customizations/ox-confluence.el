@@ -63,7 +63,7 @@
 		     (verbatim . org-confluence-verbatim)))
 
 (defcustom org-confluence-lang-alist
-  '(("sh" . "bash"))
+  '(("sh" . "bash") ("clojure" . "text"))
   "Map from org-babel language name to confluence wiki language name"
   :type '(alist :key-type string :value-type string))
 
@@ -195,6 +195,7 @@ CONTENTS and INFO are ignored."
 (defun org-confluence--block (language theme contents)
   (concat "\{code:theme=" theme
           (when language (format "|language=%s" language))
+	  (when (> (length (split-string contents "\n")) 15) (format "|collapse=true"))
           "}\n"
           contents
           "\{code\}\n"))
