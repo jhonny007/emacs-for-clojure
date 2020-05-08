@@ -67,3 +67,6 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; Wrap lines - avoids scrolling
+(add-hook 'org-mode-hook #'visual-line-mode)
